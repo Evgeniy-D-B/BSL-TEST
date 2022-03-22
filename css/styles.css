@@ -1,0 +1,447 @@
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 415px;
+    height: 100%;
+
+}
+
+.product-page__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    background-color: #F2F3F2;
+}
+
+.product-page__share-button:hover, 
+.product-page__share-button:active, 
+.product-page__share-button:visited, 
+.product-page__back-button:hover, 
+.product-page__back-button:active, 
+.product-page__back-button:visited, 
+.product-page__back-button,
+.product-page__share-button {
+    font-size: 20px;
+    text-decoration: none;
+    color: #181725;
+    
+}
+
+
+
+.fa-arrow-up-from-square {
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    color: #181725;
+}
+
+/*-------------------------------------------------PHOTO----------------------------------------------  */
+
+.photo-slider {
+    height: 45%;
+    padding: 0 0 20px 0;
+    border-radius: 0 0 5% 5%;
+    background-color: #F2F3F2;
+    
+    
+}
+
+.photo-slider__product-photo {
+    max-width: 330px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(../images/red-apple.png);
+    
+}
+
+.photo-slider__pagination {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.page-dots {
+    list-style: none;
+    display: inline-block;
+    max-width: 10%;
+    z-index: 2;
+    text-align: center;
+    position: relative;
+}
+
+.dot {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .4s;
+    background-color: #B3B3B3;
+}
+
+.current-dot {
+    position: relative;
+    width: 16px;
+    border-radius: 10%/50%;
+    background-color: #53B175;
+}
+
+/*------------------------------------------------- PRODUCT-INFO ----------------------------------------------  */
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+/*------------------------------------------------- TITLE-BLOCK ----------------------------------------------  */
+
+.product-info__title-block {
+    padding-bottom: 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.product-info__product-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize
+}
+
+
+.fa-heart-o {
+    text-align: left;
+    font-size: 20px;
+    color: #7C7C7C;
+}
+
+
+.product-info__product-weight {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #7C7C7C;
+}
+
+/*------------------------------------------------- NUMBER-BLOCK ----------------------------------------------  */
+
+.product-info__number-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(226, 226, 226, 0.7);
+}
+
+.produc-info__number {
+    max-width: 45px;
+    height: 45px;
+    text-align: center;
+    border: 1px solid #E2E2E2 ;
+    border-radius: 40%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+
+.fa-minus, .fa-plus {
+    font-size: 17px;
+    padding: 10px;
+}
+
+
+.fa-minus:hover, .fa-plus:hover {
+    color: #53B175;
+}
+
+
+.product-info__price {
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #181725;
+}
+
+
+/*------------------------------------------------- DETAIL-BLOCK ----------------------------------------------  */
+
+.product-info__detail-block {
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid rgba(226, 226, 226, 0.7);
+}
+
+
+.product-info__detail-title {
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.product-info__detail-title::before,
+.product-info__detail-title::after {
+    content:'';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    border-radius: 30%;
+    background-color: #181725;
+    top: 10px;
+    transition: all 0.1s ease 0s;
+}
+
+
+.product-info__detail-title::before {
+    transform: rotate(45deg);
+    left: 358px;
+}
+
+
+.product-info__detail-title::after {
+    transform: rotate(-45deg);
+    left: 365px;
+}
+
+
+
+.product-info__detail-title.active::before {
+    left: 365px;
+    transform: rotate(45deg);
+}
+
+
+.product-info__detail-title.active::after {
+    top: 16px;
+    transform: rotate(-45deg)
+}
+
+
+.product-info__detail {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;   
+    font-size: 13px;
+    line-height: 21px;
+    color: #7C7C7C;
+    display: none;
+}
+
+/*------------------------------------------------- NUTRITIONS-BLOCK ----------------------------------------------  */
+
+.product-info__nutritions-block {
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid rgba(226, 226, 226, 0.7);
+}
+
+.product-info__nutritions-title {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-info__nutritions-title::before, 
+.product-info__nutritions-title::after {
+    content:'';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    border-radius: 30%;
+    background-color: #181725;
+    top: 10px;
+    transition: all 0.1s ease 0s;
+}
+
+.product-info__nutritions-title::before {
+    left: 365px;
+    transform: rotate(45deg);
+}
+
+.product-info__nutritions-title::after {
+    top: 16px;
+    left: 365px;
+    transform: rotate(-45deg)
+}
+
+/* .product-info__nutritions-title.active::before {
+    left: 365px;
+    transform: rotate(45deg);
+}
+
+.product-info__nutritions-title.active::after {
+    top: 16px;
+    transform: rotate(-45deg)
+} */
+
+.product-info__nutritions-weight {
+    width: 33px;
+    height: 18px;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9px;
+    text-align: center;
+}
+
+.product-info__nutritions {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;   
+    font-size: 13px;
+    line-height: 21px;
+    color: #7C7C7C;
+    display: none;
+}
+
+.product-info__nutritions-weight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    position: absolute;
+    left: 85%;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 14px;
+    color: #7C7C7C
+}
+
+/*------------------------------------------------- REVIEW-BLOCK ----------------------------------------------  */
+
+.product-info__review {
+    display: flex;
+    position: relative;
+    padding: 20px 0 20px 0;
+}
+
+.product-info__review-title {
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-info__review-title::before, 
+.product-info__review-title::after {
+    content:'';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    border-radius: 30%;
+    background-color: #181725;
+    top: 10px;
+    transition: all 0.1s ease 0s;
+}
+
+.product-info__review-title::before {
+    left: 365px;
+    transform: rotate(45deg);
+}
+
+.product-info__review-title::after {
+    transform: rotate(-45deg);
+    left: 365px;
+    top: 16px;
+    
+}
+
+.product-info__raiting {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    width: 115px;
+    position: absolute;
+    left: 64%;
+}
+.product-info__raiting:not(:checked) > input {
+	display: none;
+}
+.product-info__raiting:not(:checked) > label {
+    display: flex;
+    align-items: center;
+	padding: 0;
+    height: 30px;
+    padding: 0 1px 0 1px;
+	cursor: pointer;
+	font-size: 25px;
+	color: lightgrey;
+    transition: all 0.3s;
+}
+.product-info__raiting:not(:checked) > label:before {
+	content: '★';
+}
+.product-info__raiting > input:checked ~ label {
+	color: #F3603F;
+}
+.product-info__raiting:not(:checked) > label:hover,
+.product-info__raiting:not(:checked) > label:hover ~ label {
+	color: #F3603F;
+}
+.product-info__raiting > input:checked + label:hover,
+.product-info__raiting > input:checked + label:hover ~ label,
+.product-info__raiting > input:checked ~ label:hover,
+.product-info__raiting > input:checked ~ label:hover ~ label,
+.product-info__raiting > label:hover ~ input:checked ~ label {
+	color: #F3603F;
+}
+.product-info__raiting > label:active {
+	position: relative;
+}
+
+
+/*------------------------------------------------- BUTTON-BLOCK ----------------------------------------------  */
+ 
+.button-block {
+    
+    padding: 5%;
+}
+
+.button-block__button {
+    width: 100%;
+    height: 67px;
+    background-color: #53B175;
+    border: none;
+    border-radius: 20px;
+    font-style: normal;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #FFF9FF;
+    transition: all 0.2s;
+}
+
+.button-block__button:hover {
+    transform: scale(1.05);
+}
+
+.button-block__button:active {
+    transform: scale(0.95);
+
+}
+
+

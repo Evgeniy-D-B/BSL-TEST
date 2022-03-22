@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset-styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/784262a695.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Product detail</title>
+</head>
+<body>
+    
+    <div class="product-page">
+
+        <div class="product-page__nav">
+            <a href="#" class="product-page__back-button"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="#" class="product-page__share-button"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+
+        </div>
+
+        <div class="photo-slider">
+            
+            <div class="photo-slider__product-photo">
+            </div>
+
+            <div class="photo-slider__pagination">
+                <ol class="page-dots">
+                    <li class="dot current-dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                  </ol>
+            </div>
+
+        </div>
+
+
+        <div class="product-info">
+
+            <div class="product-info__title-block">
+
+                <div class="wrapper">
+                    <h2 class="product-info__product-title">naturel red apple</h2>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </div>
+
+                <span class="product-info__product-weight">1kg,price</span>
+            </div>
+
+
+
+            <div class="product-info__number-block">
+
+                <div class="product-info__counter">
+                    <i class="fa-solid fa-minus"></i>
+                    <input class="produc-info__number" type="text" name="product-number" value="1" />
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+    
+                <span class="product-info__price">
+                    $4,99
+                </span>
+            </div>
+
+
+
+            <div class="product-info__detail-block">
+
+                <div class="product-info__detail-title">
+                    <h3>product detail</h3>
+                </div>
+
+                <div class="product-info__detail">
+                    Apples are nutritious. Apples may be good for weight loss.
+                    apples may be good for your heart.
+                    As part of a healtful and varied diet.
+
+                </div>
+            </div>
+
+
+            <div class="product-info__nutritions-block">
+
+                <div class="product-info__nutritions-title">
+                    <h3>nutritions</h3>
+                    <div class="product-info__nutritions-weight">
+                        100gr
+                    </div>
+                </div>
+
+
+                <div class="product-info__nutritions">
+                    Apples are nutritious. Apples may be good for weight loss.
+                    apples may be good for your heart.
+                    As part of a healtful and varied diet.
+                </div>
+
+            </div>
+
+
+            <div class="product-info__review">
+                <div class="product-info__review-title">
+                    <h3>review</h3> 
+                </div>
+                <div class="product-info__raiting">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5" title="Оценка «5»"></label>
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4" title="Оценка «4»"></label>
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3" title="Оценка «3»"></label>
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2" title="Оценка «2»"></label>
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1" title="Оценка «1»"></label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="button-block">
+
+            <button class="button-block__button" type="submit">
+                add to busket   
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
