@@ -5,6 +5,7 @@
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        arrows: false,
     });
 
     
@@ -14,5 +15,11 @@
         slidesToScroll: 1,
     });
 
-    
+    $('.photo-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 1,
+        arrows: false,
+    });
       

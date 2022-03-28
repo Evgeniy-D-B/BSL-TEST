@@ -41,7 +41,7 @@
 /*-------------------------------------------------PHOTO----------------------------------------------  */
 
 .photo-slider {
-    height: 45%;
+    height: 45vh;
     padding: 0 0 20px 0;
     border-radius: 0 0 5% 5%;
     background-color: #F2F3F2;
@@ -50,43 +50,50 @@
 }
 
 .photo-slider__product-photo {
-    max-width: 330px;
+    width: 100%;
     height: 200px;
     margin: 0 auto;
-    background-image: url(../images/red-apple.png);
+    background: url('../images/red-apple.png') no-repeat 40% 0%;
     
 }
 
-.photo-slider__pagination {
-    padding-top: 5%;
-    text-align: center;
+
+.slick-dots {
+    bottom: 5%;
 }
 
-.page-dots {
-    list-style: none;
-    display: inline-block;
-    max-width: 10%;
-    z-index: 2;
-    text-align: center;
-    position: relative;
+.slick-dots li {
+    margin: 0;
+    width: 7px;
 }
 
-.dot {
-    display: inline-block;
-    vertical-align: middle;
+.slick-dotted.slick-slider {
+    margin: 0;
+}
+
+.photo-slider .slick-dots button::before {
+    content: none;
+}
+
+.photo-slider .slick-dots button {
+    background-color: #B3B3B3;
     width: 3px;
     height: 3px;
-    cursor: pointer;
+    padding: 0px;
     border-radius: 50%;
-    transition: all .4s;
-    background-color: #B3B3B3;
+    margin: 0 auto;
+    transition: all 0.1s;
 }
 
-.current-dot {
-    position: relative;
-    width: 16px;
-    border-radius: 10%/50%;
-    background-color: #53B175;
+.photo-slider .slick-dots .slick-active {
+    width: 15px;
+    padding: 0 2px;
+}
+
+.photo-slider .slick-dots .slick-active button {
+   background-color: #53B175;
+   width: 15px;
+   border-radius: 15%/50%;
 }
 
 /*------------------------------------------------- PRODUCT-INFO ----------------------------------------------  */
@@ -145,6 +152,7 @@
 .produc-info__number {
     max-width: 45px;
     height: 45px;
+    outline: none;
     text-align: center;
     border: 1px solid #E2E2E2 ;
     border-radius: 40%;
@@ -153,10 +161,24 @@
     line-height: 18px;
 }
 
+.product-info__counter   .fa-minus {
+    padding: 10px 10px 10px 0;
+}
 
-.fa-minus, .fa-plus {
-    font-size: 17px;
-    padding: 10px;
+
+
+.product-info__counter   .fa-minus, 
+.product-info__counter   .fa-plus {
+    font-size: 18px;
+    color: #7C7C7C;
+}
+
+.product-info__counter   .fa-plus {
+    padding: 10px 0 10px 10px;
+}
+
+.product-info__counter   .fa-minus {
+    padding: 10px 10px 10px 0;
 }
 
 
@@ -166,6 +188,7 @@
 
 
 .product-info__price {
+    display: inline-block;
     text-align: center;
     vertical-align: middle;
     font-family: 'Lato', sans-serif;
@@ -173,6 +196,13 @@
     font-weight: bold;
     line-height: 18px;
     color: #181725;
+    position: relative;
+}
+
+.product-info__price::before {
+    content:'$';
+    position: absolute;
+    left: -15px;
 }
 
 
@@ -209,19 +239,19 @@
 
 .product-info__detail-title::before {
     transform: rotate(45deg);
-    left: 358px;
+    left: 96%;
 }
 
 
 .product-info__detail-title::after {
     transform: rotate(-45deg);
-    left: 365px;
+    left: calc(96% + 6px);
 }
 
 
 
 .product-info__detail-title.active::before {
-    left: 365px;
+    left: calc(96% + 6px);
     transform: rotate(45deg);
 }
 
@@ -272,25 +302,16 @@
 }
 
 .product-info__nutritions-title::before {
-    left: 365px;
+    left: calc(96% + 6px);
     transform: rotate(45deg);
 }
 
 .product-info__nutritions-title::after {
     top: 16px;
-    left: 365px;
+    left: calc(96% + 6px);
     transform: rotate(-45deg)
 }
 
-/* .product-info__nutritions-title.active::before {
-    left: 365px;
-    transform: rotate(45deg);
-}
-
-.product-info__nutritions-title.active::after {
-    top: 16px;
-    transform: rotate(-45deg)
-} */
 
 .product-info__nutritions-weight {
     width: 33px;
@@ -343,7 +364,31 @@
     cursor: pointer;
 }
 
-.product-info__review-title::before, 
+.product-info__review::before,
+.product-info__review::after {
+    content:'';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    border-radius: 30%;
+    background-color: #181725;
+    top: 45%;
+    transition: all 0.1s ease 0s;
+}
+
+.product-info__review::before {
+    left: calc(96% + 6px);
+    transform: rotate(45deg);
+}
+
+.product-info__review::after {
+    transform: rotate(-45deg);
+    left: calc(96% + 6px);
+    top: calc(45% + 6px);
+}
+
+
+/* .product-info__review-title::before, 
 .product-info__review-title::after {
     content:'';
     width: 10px;
@@ -356,24 +401,24 @@
 }
 
 .product-info__review-title::before {
-    left: 365px;
+    left: calc(96% + 6px);
     transform: rotate(45deg);
 }
 
 .product-info__review-title::after {
     transform: rotate(-45deg);
-    left: 365px;
+    left: calc(96% + 6px);
     top: 16px;
     
-}
+} */
 
 .product-info__raiting {
     display: flex;
     flex-direction: row-reverse;
     overflow: hidden;
-    width: 115px;
+    width: 45%;
     position: absolute;
-    left: 64%;
+    left: 50%;
 }
 .product-info__raiting:not(:checked) > input {
 	display: none;

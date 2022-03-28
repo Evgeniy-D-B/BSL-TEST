@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset-styles.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="css/slick/slick.css"/>
+    <link rel="stylesheet"  href="css/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/styles.css">
     <title>Product detail</title>
 </head>
 <body>
@@ -25,13 +27,9 @@
             
             <div class="photo-slider__product-photo">
             </div>
-
-            <div class="photo-slider__pagination">
-                <ol class="page-dots">
-                    <li class="dot current-dot"></li>
-                    <li class="dot"></li>
-                    <li class="dot"></li>
-                  </ol>
+            <div class="photo-slider__product-photo">
+            </div>
+            <div class="photo-slider__product-photo">
             </div>
 
         </div>
@@ -54,13 +52,13 @@
             <div class="product-info__number-block">
 
                 <div class="product-info__counter">
-                    <i class="fa-solid fa-minus"></i>
-                    <input class="produc-info__number" type="text" name="product-number" value="1" />
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-minus" id="down"></i>
+                    <input class="produc-info__number" id="numericUpDown" type="text" name="product-number" value="1" />
+                    <i class="fa-solid fa-plus" id="up"></i>
                 </div>
     
-                <span class="product-info__price">
-                    $4,99
+                <span class="product-info__price" id="sum">
+                    4,99
                 </span>
             </div>
 
@@ -131,5 +129,7 @@
     <script src="https://kit.fontawesome.com/784262a695.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slick-int.js"></script>
 </body>
 </html>
