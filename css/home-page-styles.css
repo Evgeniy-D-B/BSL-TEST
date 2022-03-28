@@ -1,0 +1,499 @@
+/* ----------------------------------------- PRODUCT IMAGES --------------------------------------------- */
+
+.banana-img {
+    background: url('../images/banana-img.png') no-repeat 35% 40%;
+}
+
+.red-apple-img {
+    background: url('../images/red-apple-small.png') no-repeat 40% 50%;
+}
+
+.red-peper-img {
+    background: url('../images/red-peper.png') no-repeat 40% 50%;
+}
+
+.ginger-img {
+    background: url('../images/ginger.png') no-repeat 40% 50%;
+}
+
+.beef-bone-img {
+    background: url('../images/beef-bone-small.png') no-repeat 40% 50%;
+}
+
+.broiler-chiken-img {
+    background: url('../images/broiler-chiken-small.png') no-repeat 40% 50%;
+}
+
+.bulk-product-img {
+    background: url('../images/bulk-products-small.png') no-repeat 5% 50%;
+}
+
+.rise-img {
+    background: url('../images/rise-small.png') no-repeat 10% 50%;
+}
+
+
+
+
+/* -----------------------------------------PRODUCT TITLE TEXT --------------------------------------------- */
+
+.ttl-text-1::before {
+    content: 'organic bananas';
+
+}
+
+.ttl-text-2::before {
+    content: 'red apple';
+
+}
+
+.ttl-text-3::before {
+    content: 'red peper';
+}
+
+.ttl-text-4::before {
+    content: 'ginger';
+}
+
+.ttl-text-5::before {
+    content: 'beef bone';
+}
+.ttl-text-6::before {
+    content: 'broiler chicken';
+}
+
+/* -----------------------------------------NAVIGATION PANEL ITEM TITLE TEXT --------------------------------------------- */
+
+.item-title-1::before {
+    content: 'shop';
+}
+.item-title-2::before {
+    content: 'explorе';
+}
+.item-title-3::before {
+    content: 'cart';
+}
+.item-title-4::before {
+    content: 'favourite';
+}
+.item-title-5::before {
+    content: 'account';
+}
+
+/* -------------------------------------- PRODUCT DESCRIPTION TEXT --------------------------------------- */
+
+.descr-1::before {
+    content: '7pcs, Price'
+
+}
+
+.descr-2::before {
+    content: '1kg, Price'
+
+}
+
+.descr-3::before {
+    content: '250gm, Price'
+}
+
+
+.home-screen {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 5% 0 25vh 0;
+    max-width: 415px;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    padding: 0 5% 20px 5%;
+}
+
+.section:nth-child(1) {
+    padding: 0 5%;
+}
+
+/* ----------------------------------------------NAVIGATION PANEL ---------------------------------------- */
+
+.navigation-panel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 415px;
+    height: 10vh;
+    padding: 0 2%;
+    box-sizing: border-box;
+    box-shadow: 0px -12px 37px rgba(230, 235, 243, 0.5);
+    border-radius: 15px 15px 0px 0px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0%;
+    z-index: 2;
+}
+
+
+.navigation-panel__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 13%;
+    height: 70%;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s;
+    color: #181725;
+}
+
+.navigation-panel__item-title {
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: capitalize;
+}
+
+
+.navigation-panel__item:visited,
+.navigation-panel__item:hover {
+    color: #181725;
+}
+
+.home-screen .navigation-panel .navigation-panel__item:hover {
+    color: #53B175;
+    font-size: 20px;
+}
+
+/* ------------------------------------------- LOGO ------------------------------------------- */
+.logo {
+    width: 28px;
+    height: 32px;
+    background: url('../images/carrot-logo-part.svg') no-repeat 0% 100%,
+                url('../images/carrot-leaf-logo-part.svg') no-repeat 100% 0%;
+}
+ 
+/* ------------------------------------------- LOCATION ------------------------------------------- */
+.location-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-indicator__input {
+    position: relative;
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #4C4F4D;
+    background-color: #ffffff;
+    border: none;
+    width: 60%;
+
+}
+
+.fa-location-dot {
+    vertical-align: middle;
+    color: #4C4F4D;
+}
+
+/* ------------------------------------------- SEARCH PANEL ------------------------------------------- */
+
+
+.search-panel {
+    width: 100%;
+    height: 55px;
+    padding: 0 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F3F2;
+    border-radius: 15px;
+}
+
+.search-panel__input {
+    width: 90%;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    background-color: #F2F3F2;
+}
+
+.search-panel .fa-magnifying-glass {
+    font-size: 20px;
+}
+
+
+/* ------------------------------------------- PROMOTIONS ------------------------------------------- */
+
+.promotions {
+    width: 100%;
+}
+
+.promotions-slider {
+    border-radius: 8px;
+}
+
+.promotions-slider .slide-1, 
+.promotions-slider .slide-2, 
+.promotions-slider .slide-3 {
+    width: 100%;
+    height: 115px;
+    position: relative;
+    border: 1px solid #F2F3F2;
+    border-radius: 8px;
+    background:  url('../images/leafs.png') no-repeat,
+                url('../images/many-vegetables.png') no-repeat 5% 5%, 
+                url('../images/midle-vegetables.png') no-repeat 100% 0%,
+                url('../images/cabbage-leaf.png') no-repeat 100% 100%;
+    background-color: #f8a54c25;
+}
+
+.promotions-slider__text_main {
+    font-family: 'Aclonica', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    position: absolute;
+    left: 40%;
+    top: 35%;
+}
+
+.promotions-slider__text_colored {
+    min-width: 125px;
+    top: 20%;
+    left: 25%;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color:#53B175;
+    position: absolute;
+    left: 48%;
+    top: 55%;
+}
+
+.slick-next {
+    right: 0px;
+    width: 0px;
+}
+
+.slick-dots {
+    bottom: 0px;
+}
+
+.slick-dots li {
+    margin: 0;
+    width: 15px;
+}
+
+.slick-dotted.slick-slider {
+    margin: 0;
+}
+
+.promotions-slider .slick-dots button::before {
+    content: none;
+}
+
+.promotions-slider .slick-dots button {
+    background-color: #B3B3B3;
+    width: 5px;
+    height: 5px;
+    padding: 0px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: all 0.1s;
+}
+
+.promotions-slider .slick-dots .slick-active button {
+   background-color: #53B175;
+   width: 15px;
+   border-radius: 15%/50%;
+}
+
+
+/* ---------------------------------------------------------- Exclusive Offer ------------------------------------- */
+
+.section__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 20px 0;
+
+}
+
+.section__title-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize
+}
+
+.see-all-btn {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color:  #53B175;
+    text-decoration: none;
+}
+
+.section__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__content {
+    width: 100%;
+    height: 250px;
+}
+
+/* ---------------------------------------------------------- Product Carousel ------------------------------------- */
+
+.carousel-block__inner {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    padding: 0 8%;
+    box-sizing: border-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 18px;
+}
+
+.carousel-block__image {
+    height: 120px;
+}
+
+.carousel-block__title-text {
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #181725;
+}
+
+
+.carousel-block__description {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #7C7C7C;
+}
+
+
+.carousel-block__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.carousel-block__product-price {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color:  #181725;
+
+}
+
+.carousel-block__add-button {
+    width: 45px;
+    height: 45px;
+    box-sizing: border-box;
+    font-size: 17px;
+    background-color: #53B175;
+    border: 1px solid #53B175;
+    border-radius: 17px;
+    color: #fff;
+    transition: all 0.1s; 
+}
+
+.carousel-block__add-button:hover {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #45d67a;
+}
+.carousel-block__add-button:active {
+    width: 42px;
+    height: 42px;
+    background-color: #45d67a;
+    border: 1px solid #45d67a;
+}
+
+.loose-product-carousel {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    box-sizing: border-box;
+}
+
+.loose-product-carousel::-webkit-scrollbar {
+    width: 25px;
+}
+
+.loose-product-carousel__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 105px;
+    margin: 0 1%;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border-radius: 18px;
+}
+
+.block-1 {
+    background-color: #f8a54c36;
+}
+
+.block-2 {
+    background-color: #53b17536;
+
+}
+
+.loose-product-carousel__title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #3E423F;
+
+}
+
+@media (max-width: 480px)  {
+
+    .carousel-block__inner {
+        padding: 0 5%;
+        width: 90%;
+    }
+    .carousel-block__title-text {
+        font-size: 14px;
+    }
+
+    .carousel-block__add-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px
+    }
+
+    .carousel-block__product-price {
+        font-size: 16px
+    }
+
+    .promotions-slider__text_main {
+        font-size: 17px
+    }
+
+}
